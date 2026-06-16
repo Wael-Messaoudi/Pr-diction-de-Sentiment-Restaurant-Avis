@@ -22,12 +22,12 @@ L’interface offre une expérience simple et intuitive permettant de comparer l
 
 ### Prétraitement NLP
 Avant la prédiction, les avis passent par plusieurs étapes de nettoyage :
--Conversion du texte en minuscules.
--Suppression de la ponctuation, des chiffres et des caractères spéciaux.
--Tokenisation des phrases en mots avec NLTK.
--Suppression des stop words (mots fréquents sans valeur informative).
--Lemmatisation avec spaCy pour ramener les mots à leur forme de base.
--Génération de représentations vectorielles des mots avec Gensim (Word2Vec) pour capturer les relations sémantiques entre les termes.
+- Conversion du texte en minuscules.
+- Suppression de la ponctuation, des chiffres et des caractères spéciaux.
+- Tokenisation des phrases en mots avec NLTK.
+- Suppression des stop words (mots fréquents sans valeur informative).
+- Lemmatisation avec spaCy pour ramener les mots à leur forme de base.
+- Génération de représentations vectorielles des mots avec Gensim (Word2Vec) pour capturer les relations sémantiques entre les termes.
 
 ### Interface utilisateur
 - Interface moderne développée avec Streamlit.

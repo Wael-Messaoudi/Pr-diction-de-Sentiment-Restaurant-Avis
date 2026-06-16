@@ -89,7 +89,7 @@ Padding
  ↓
 LSTM
  ↓
-Softmax
+Dense+Softmax
  ↓
 Prédiction
 ```

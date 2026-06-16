@@ -22,11 +22,12 @@ L’interface offre une expérience simple et intuitive permettant de comparer l
 
 ### Prétraitement NLP
 Avant la prédiction, les avis passent par plusieurs étapes de nettoyage :
-- Conversion en minuscules.
-- Suppression de la ponctuation et des caractères spéciaux.
-- Tokenisation avec NLTK.
-- Suppression des stop words.
-- Suppression des mots très courts.
+-Conversion du texte en minuscules.
+-Suppression de la ponctuation, des chiffres et des caractères spéciaux.
+-Tokenisation des phrases en mots avec NLTK.
+-Suppression des stop words (mots fréquents sans valeur informative).
+-Lemmatisation avec spaCy pour ramener les mots à leur forme de base.
+-Génération de représentations vectorielles des mots avec Gensim (Word2Vec) pour capturer les relations sémantiques entre les termes.
 
 ### Interface utilisateur
 - Interface moderne développée avec Streamlit.
@@ -55,6 +56,8 @@ Le processus de prédiction suit les étapes suivantes :
 - **TensorFlow / Keras** pour le modèle LSTM
 - **NLTK** pour le prétraitement NLP
 - **NumPy** pour les calculs numériques
+- **Spacy** Analyse linguistique avancée et traitement efficace du texte
+- **Gensim** Génération de représentations vectorielles des mots (Word Embeddings)
 - **Joblib** pour la sauvegarde et le chargement des modèles
 
 ## Architecture des modèles
@@ -146,6 +149,7 @@ http://localhost:8501
 ## Structure du projet
 
 - `app.py` : Interface Streamlit et logique de prédiction.
+- `Model_NLP.ipynb` : Notebook contenant l'entraînement, l'évaluation et l'analyse des modèles.
 - `svm_model.pkl` : Modèle SVM entraîné.
 - `tfidf.pkl` : Vectoriseur TF-IDF.
 - `tokenizer.pkl` : Tokenizer utilisé pour le modèle LSTM.
@@ -165,17 +169,4 @@ Le système prédit l’une des trois classes suivantes :
 
 Les probabilités associées à chaque classe sont également affichées afin d’interpréter le niveau de confiance du modèle.
 
-## Améliorations futures
 
-- Support multilingue (Français, Arabe, Anglais).
-- Ajout de modèles Transformers (BERT, DistilBERT).
-- Déploiement sur Streamlit Cloud.
-- Historique des prédictions.
-- Analyse d’aspects (service, nourriture, ambiance).
-- Comparaison détaillée des performances des modèles.
-
-## Auteur
-
-**Wael Messaoudi**
-
-Étudiant en Intelligence Artificielle, Data Science et Machine Learning.
